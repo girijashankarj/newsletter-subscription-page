@@ -121,7 +121,7 @@ garry-newsletter-subscription-page/
    - Enable GitHub Pages: Repo → **Settings → Pages** → Source: **GitHub Actions**  
    - Add secret: **Settings → Secrets and variables → Actions** → `VITE_NEWSLETTER_SCRIPT_URL` (same Apps Script URL as portfolio)  
    - Push to `main` — the workflow builds and deploys automatically  
-   - Live at: `https://<username>.github.io/garry-newsletter-subscription-page/`
+   - Live at: `https://girijashankarj.github.io/garry-newsletter-subscription-page/`
 
 ---
 
