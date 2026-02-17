@@ -103,6 +103,8 @@ garry-newsletter-subscription-page/
 ├── index.html
 ├── vite.config.js
 ├── package.json
+├── dev-scripts/
+│   └── sync-secrets-to-github.sh   # Sync .env → GitHub Secrets
 ├── .env.example
 └── README.md
 ```
@@ -117,9 +119,15 @@ garry-newsletter-subscription-page/
 2. **Environment**  
    Copy `.env.example` to `.env` and set `VITE_NEWSLETTER_SCRIPT_URL` (same var as portfolio; use the same URL if sharing the sheet).
 
-3. **Deploy to GitHub Pages**  
+3. **Sync secrets to GitHub** (for deploy)
+   ```bash
+   ./dev-scripts/sync-secrets-to-github.sh
+   ```
+   Prerequisite: `gh auth login`. Syncs `.env` values to GitHub Secrets.
+
+4. **Deploy to GitHub Pages**  
    - Enable GitHub Pages: Repo → **Settings → Pages** → Source: **GitHub Actions**  
-   - Add secret: **Settings → Secrets and variables → Actions** → `VITE_NEWSLETTER_SCRIPT_URL` (same Apps Script URL as portfolio)  
+   - Secrets are synced via `./dev-scripts/sync-secrets-to-github.sh` (run after filling `.env`)  
    - Push to `main` — the workflow builds and deploys automatically  
    - Live at: `https://girijashankarj.github.io/garry-newsletter-subscription-page/`
 

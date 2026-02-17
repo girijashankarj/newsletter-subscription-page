@@ -35,6 +35,14 @@ jobs:
         env:
           GITHUB_PAGES: "true"
           VITE_NEWSLETTER_SCRIPT_URL: ${{ secrets.VITE_NEWSLETTER_SCRIPT_URL }}
+          VITE_AUTHOR_NAME: ${{ secrets.VITE_AUTHOR_NAME }}
+          VITE_AUTHOR_TITLE: ${{ secrets.VITE_AUTHOR_TITLE }}
+          VITE_PORTFOLIO_URL: ${{ secrets.VITE_PORTFOLIO_URL }}
+          VITE_LINKEDIN_URL: ${{ secrets.VITE_LINKEDIN_URL }}
+          VITE_GITHUB_URL: ${{ secrets.VITE_GITHUB_URL }}
+          VITE_FOOTER_TAGLINE: ${{ secrets.VITE_FOOTER_TAGLINE }}
+          VITE_NEWSLETTER_NAME: ${{ secrets.VITE_NEWSLETTER_NAME }}
+          VITE_PAGE_TITLE: ${{ secrets.VITE_PAGE_TITLE }}
         run: npm run build
 
       - name: Upload artifact
