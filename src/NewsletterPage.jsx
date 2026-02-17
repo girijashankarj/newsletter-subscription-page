@@ -260,7 +260,7 @@ function SubscribeSection() {
     try {
       const res = await fetch(APPS_SCRIPT_URL, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "text/plain;charset=UTF-8" },
         body: JSON.stringify(payload),
       });
       const data = await res.json().catch(() => ({}));
@@ -564,7 +564,7 @@ function UnsubscribeSection() {
     try {
       const res = await fetch(APPS_SCRIPT_URL, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "text/plain;charset=UTF-8" },
         body: JSON.stringify({
           action: "unsubscribe",
           email: email.trim(),
