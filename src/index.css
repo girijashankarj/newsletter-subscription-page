@@ -46,3 +46,11 @@ body {
   color: var(--text);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+/* Subtle gradient for depth */
+:root .page-gradient {
+  background: linear-gradient(180deg, rgba(37, 99, 235, 0.03) 0%, transparent 40%);
+}
+.dark .page-gradient {
+  background: linear-gradient(180deg, rgba(59, 130, 246, 0.04) 0%, transparent 40%);
+}
